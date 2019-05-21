@@ -48,4 +48,4 @@ public class StudentCalc extends Application {
 	}
 
 
-}
+} 
