@@ -10,6 +10,10 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
+import app.helper.Loan;
+import app.helper.Payment;
+import java.text.DecimalFormat;
+import org.apache.poi.ss.formula.functions.*;
 
 public class LoanCalcViewController implements Initializable   {
 
@@ -25,7 +29,19 @@ public class LoanCalcViewController implements Initializable   {
 	@FXML
 	private DatePicker PaymentStartDate;
 	
+	@FXML
+	private Label lblTotalInterest;
 	
+	@FXML
+	private TextField AdditionalPayment;
+	
+	@FXML
+	private TextField InterestRate;
+	
+	@FXML
+	private TextField NbrOfYears;
+	
+	private static DecimalFormat dec = new DecimalFormat("0.00");
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
